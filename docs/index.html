@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z o n e k</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>z o n e k</h1>
+        <nav class="navigation-container">
+            <div class="navigation" onclick="navigateTo('blog')">
+                <p>Blog</p>
+            </div>
+            <div class="navigation" onclick="navigateTo('info')">
+                <p>Info</p>
+            </div>
+            <div class="navigation" onclick="navigateTo('resume')">
+                <p>Resume</p>
+            </div>
+        </nav>
+    </header>
+    <script src="scripts.js"></script>
+
+    <div class="box">
+        <div class="box-content">
+            <div class="text">
+                <h2>Java</h2>
+                <p>Java is an object-oriented programming language developed by Sun Microsystems in the 1990s. It's designed to be platform-independent and runs on the Java Virtual Machine (JVM).</p>
+            </div>
+            <img src="https://picsum.photos/300/200" alt="">
+        </div>
+    </div>
+
+    <div class="box box-2">
+        <img src="https://picsum.photos/300/200" alt="">
+        <div class="text">
+            <h2>C#</h2>
+            <p>C# (pronounced "C Sharp") is a modern, object-oriented programming language developed by Microsoft. It's part of the .NET framework and is used for building Windows applications and games.</p>
+
+        </div>
+    </div>
+    <div class="box box-3">
+        <img src="https://picsum.photos/300/200" alt="">
+        <div class="text">
+            <h2>SQL</h2>
+            <p>SQL (Structured Query Language) is a domain-specific language used for managing and querying relational databases. It's widely used for data manipulation and retrieval in database management systems.</p>
+
+        </div>
+    </div>
+    <div class="box box-4">
+        <img src="https://picsum.photos/300/200" alt="">
+        <div class="text">
+            <h2>Web Programming</h2>
+            <p>Web programming involves the use of various languages and technologies, such as HTML, CSS, JavaScript, and server-side languages like PHP or Python, to build websites and web applications.</p>
+
+        </div>
+    </div>
+    <div class="box box-5">
+        <img src="https://picsum.photos/300/200" alt="">
+        <div class="text">
+            <h2>Box 5</h2>
+            <p>Example link</p>
+        </div>
+    </div>
+    <!-- Add more boxes similarly -->
+
+
+
+
+    <div class="container">
+        <div class="box box-1">
+            <img src="https://picsum.photos/300/200" alt="">
+            <div class="text">
+                <h2>Java</h2>
+                <p>Java is an object-oriented programming language developed by Sun Microsystems in the 1990s. It's designed to be platform-independent and runs on the Java Virtual Machine (JVM).</p>
+            </div>
+        </div>
+        <div class="box box-2">
+            <div class="text">
+                <h2>C#</h2>
+                <p>C# (pronounced "C Sharp") is a modern, object-oriented programming language developed by Microsoft. It's part of the .NET framework and is used for building Windows applications and games.</p>
+            </div>
+            <img src="https://picsum.photos/300/200" alt="">
+        </div>
+        <div class="box box-3">
+            <img src="https://picsum.photos/300/200" alt="">
+            <div class="text">
+                <h2>SQL</h2>
+                <p>SQL (Structured Query Language) is a domain-specific language used for managing and querying relational databases. It's widely used for data manipulation and retrieval in database management systems.</p>
+            </div>
+        </div>
+        <div class="box box-4">
+            <div class="text">
+                <h2>Web Programming</h2>
+                <p>Web programming involves the use of various languages and technologies, such as HTML, CSS, JavaScript, and server-side languages like PHP or Python, to build websites and web applications.</p>
+            </div>
+            <img src="https://picsum.photos/300/200" alt="">
+        </div>
+        <div class="box box-5">
+            <img src="https://picsum.photos/300/200" alt="">
+            <div class="text">
+                <h2>Box 5</h2>
+                <p>Example link</p>
+            </div>
+        </div>
+        <div class="box box-6">
+            <div class="text">
+                <h2>Box 6</h2>
+                <p>Example link</p>
+            </div>
+            <img src="https://picsum.photos/300/200" alt="">
+        </div>
+    </div>
+
+    <div class="snake-game-container ">
+        <button class="collapsible ">Play Snake Game</button>
+        <div class="collapsible-content ">
+            <h1>Snake Game</h1>
+            <div class="game-container ">
+                <canvas id="game-board " width="600 " height="600 "></canvas>
+                <div class="score-board ">
+                    <h2>All-Time High: <span id="all-time-high ">0</span></h2>
+                    <h2>Current Score: <span id="current-score ">0</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer ">
+        <p>&copy; 2023 Z1K</p>
+        <p><a href="#info ">Info</a></p>
+    </footer>
+
+    <script src="snake.js "></script>
+    <script>
+        const collapsibleButton = document.querySelector('.collapsible');
+        const collapsibleContent = document.querySelector('.collapsible-content');
+        collapsibleButton.addEventListener('click', function() {
+            collapsibleContent.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+
+</html>
