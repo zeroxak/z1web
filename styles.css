@@ -26,7 +26,7 @@
             text-align: center;
             background-color: black;
             color: white;
-            margin-top: 6em;
+            margin-top: 8.5em;
             margin-bottom: 3em;
         }
         
@@ -132,7 +132,7 @@
         
         .section .section {
             border-color: #00FF00;
-            margin: 3em;
+            margin: 20px;
             padding: 20px;
         }
         
@@ -166,4 +166,45 @@
             justify-content: space-evenly;
             gap: 20px;
             flex-wrap: wrap;
+        }
+        
+        @media screen and (max-width: 768px) {
+            /* Styles for mobile devices go here */
+            .section {
+                border: 2px solid #FF00FF;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 1em;
+            }
+            .section .section h2 {
+                text-align: left;
+                margin-left: 10px;
+            }
+            .icon {
+                width: 25px;
+                height: 25px;
+                padding: 4px;
+                background-color: white;
+                display: inline-block;
+                margin: 2px;
+                border-radius: 12px;
+                margin-right: 1em;
+            }
+            .icon-label {
+                text-align: center;
+            }
+            .icon-label-pair {
+                display: flex;
+                align-items: center;
+            }
+            .icon-label-container {
+                display: grid;
+                align-items: start;
+                justify-content: space-evenly;
+                gap: 5px;
+                flex-wrap: wrap;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
         }
