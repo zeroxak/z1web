@@ -83,6 +83,16 @@
     .navigation:hover {
         background-color: #333333;
     }
+
+    ul {
+        margin-bottom: 5px;
+        color: #00FF00;
+    }
+    
+    li {
+        font-size: 1em;
+        line-height: 1.6;
+    }    
     
     @media (min-width: 768px) {
         .navigation:last-child {
