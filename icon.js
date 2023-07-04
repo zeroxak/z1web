@@ -1,68 +1,37 @@
-import * as THREE from 'three';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
 
-function createPyramidGeometry(size, height) {
-    let geometry = new THREE.Geometry();
-
-    // Create the vertices of the pyramid
-    geometry.vertices.push(
-        new THREE.Vector3(0, 0, 0),
-        new THREE.Vector3(size, 0, 0),
-        new THREE.Vector3(size, size, 0),
-        new THREE.Vector3(0, size, 0),
-        new THREE.Vector3(size / 2, size / 2, height)
-    );
-
-    // Create the faces of the pyramid
-    geometry.faces.push(
-        new THREE.Face3(0, 1, 4),
-        new THREE.Face3(1, 2, 4),
-        new THREE.Face3(2, 3, 4),
-        new THREE.Face3(3, 0, 4),
-        new THREE.Face3(1, 0, 3),
-        new THREE.Face3(3, 2, 1)
-    );
-
-    geometry.computeFaceNormals();
-
-    return geometry;
-}
-
-function createIcon() {
-    const geometry = createPyramidGeometry(1, 2);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Color set to green
-    const icon = new THREE.Mesh(geometry, material);
-
-    return icon;
-}
-
-// Code for setting up the scene, camera, and renderer
+// 1. Scene
 const scene = new THREE.Scene();
+
+// 2. Camera
 const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
 );
 camera.position.z = 2;
 
+// 3. Renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-renderer.setSize(50, 50);
-document.querySelector('#iconContainer').appendChild(renderer.domElement);
+// 4. Geometry
+const geometry = new THREE.ConeGeometry(0.5, 1, 4);
 
-// Create the pyramid icon and add it to the scene
-const icon = createIcon();
-scene.add(icon);
+// 5. Material
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Color set to green
 
-// Move the camera out so you can see the icon
-camera.position.z = 5;
+// 6. Mesh (Object)
+const pyramid = new THREE.Mesh(geometry, material);
+scene.add(pyramid);
 
-// Animation loop
 function animate() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+  pyramid.rotation.x += 0.01;
+  pyramid.rotation.y += 0.01;
+  renderer.render(scene, camera);
 }
 
 animate();
