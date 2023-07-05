@@ -1,5 +1,3 @@
-import * as THREE from 'https://github.com/mrdoob/three.js/blob/master/build/three.module.js';
-
 // 1. Scene
 const scene = new THREE.Scene();
 
