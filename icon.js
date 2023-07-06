@@ -12,8 +12,8 @@ camera.position.z = 1;
 */
 
 // Calculate width and height of the view
-const width = 10;  // width of the viewport
-const height = width * (window.innerHeight / window.innerWidth);  // calculate the height of the viewport to maintain aspect ratio
+const width = 5;  // Halved the width of the viewport
+const height = width * (window.innerHeight / window.innerWidth);  // Calculate the height of the viewport to maintain aspect ratio
 
 // OrthographicCamera
 const camera = new THREE.OrthographicCamera(width / - 2, width / 2, height / 2, height / - 2, 1, 1000);
