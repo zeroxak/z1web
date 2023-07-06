@@ -8,11 +8,11 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-camera.position.z = 2;
+camera.position.z = 1;
 
 // 3. Renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(78, 78);
+renderer.setSize(50, 50);
 
 const iconContainer = document.querySelector('#iconContainer');
 iconContainer.appendChild(renderer.domElement);
