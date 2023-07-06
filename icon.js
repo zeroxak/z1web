@@ -12,8 +12,9 @@ camera.position.z = 2;
 
 // 3. Renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+renderer.setSize(50, 50); // Adjust size to fit your header.
+const iconContainer = document.querySelector('#iconContainer');
+iconContainer.appendChild(renderer.domElement);
 
 // 4. Geometry
 const geometry = new THREE.ConeGeometry(0.5, 1, 4);
