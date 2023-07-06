@@ -28,7 +28,7 @@ const iconContainer = document.querySelector('#iconContainer');
 iconContainer.appendChild(renderer.domElement);
 
 // 4. Geometry
-const geometry = new THREE.ConeGeometry(0.5, 1, 4);
+const geometry = new THREE.ConeGeometry(0.5, .5, 4);
 
 // 5. Material
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Color set to green
