@@ -2,13 +2,23 @@
 const scene = new THREE.Scene();
 
 // 2. Camera
-const camera = new THREE.PerspectiveCamera(
+/*const camera = new THREE.PerspectiveCamera(
   100,
   1,
   0.1,
   1000
 );
 camera.position.z = 1;
+*/
+
+// Calculate width and height of the view
+const width = 10;  // width of the viewport
+const height = width * (window.innerHeight / window.innerWidth);  // calculate the height of the viewport to maintain aspect ratio
+
+// OrthographicCamera
+const camera = new THREE.OrthographicCamera(width / - 2, width / 2, height / 2, height / - 2, 1, 1000);
+
+camera.position.z = 2;
 
 // 3. Renderer
 const renderer = new THREE.WebGLRenderer();
