@@ -12,7 +12,7 @@ camera.position.z = 1;
 */
 
 // Calculate width and height of the view
-const width = 5;  // Halved the width of the viewport
+const width = 2;  // Halved the width of the viewport
 const height = width * (window.innerHeight / window.innerWidth);  // Calculate the height of the viewport to maintain aspect ratio
 
 // OrthographicCamera
