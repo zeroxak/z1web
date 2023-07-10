@@ -141,12 +141,14 @@ header h1 {
 }
 
 .icon-label {
-    text-align: center;
+    text-align: left;
 }
 
 .icon-label-pair {
     display: flex;
     align-items: center;
+    padding-left: 2.5em;
+    justify-content: stretch;
 }
 
 .icon-label-container {
@@ -154,7 +156,7 @@ header h1 {
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     /* this makes 3 items per row */
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -236,5 +238,9 @@ header h1 {
     h1 {
         width: 10em;
         text-align: left;
+    }
+    .iconContainer {
+        display: none;
+        visibility: hidden;
     }
 }
