@@ -32,12 +32,3 @@ z1web is your one-stop source for all things Zak. Check out my skills, read insi
   
 </div>
 
-## Footer
-
-For more fun, check out this classic Xbox 360 background!
-
-<div align="center">
-
-  <img src="Graphics/xbox360bladesbackground.jpg" width="100" alt="Xbox 360 Blades Background">
-
-</div>
