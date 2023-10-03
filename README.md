@@ -37,6 +37,8 @@ z1web is your one-stop source for all things Zak. Check out my skills, read insi
   <img src="Graphics/LavaLamp.gif" width="100" alt="Lava Lamp">
   <img src="Graphics/RoboDance.gif" width="100" alt="Robo Dance">
   <img src="Graphics/WalkingKitty.gif" width="100" alt="Walking Kitty">
+  <img src="Graphics/LilComputer.gif" width="100" alt="Lil Computer">
+  <img src="Graphics/RotatingSkull.gif" width="100" alt="Rotating Skull">
 
 </div>
 
@@ -47,6 +49,6 @@ For more fun, check out these ads and backgrounds!
 <div align="center">
 
   <img src="Graphics/WinzipAd.gif" width="100" alt="Winzip Ad">
-  <img src="Graphics/xbox360bladesbackground.jpg" width="100" alt="Xbox 360 Blades Background">
+  <img src="Graphics/BestViewedWith.gif" width="100" alt="IE Ad">
 
 </div>
