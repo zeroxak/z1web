@@ -5,13 +5,13 @@ Welcome to z1web, where you can find my skills, read my blog, and view my resume
 <div align="center">
   
   <!-- Skills -->
-  <img src="DootDoot.gif" width="100" alt="Skills">
+  <img src="Graphics/DootDoot.gif" width="100" alt="Skills">
   
   <!-- Blog -->
-  <img src="LilComputer.gif" width="100" alt="Blog">
+  <img src="Graphics/LilComputer.gif" width="100" alt="Blog">
   
   <!-- Resume -->
-  <img src="GlowingAnatomicMan.gif" width="100" alt="Resume">
+  <img src="Graphics/GlowingAnatomicMan.gif" width="100" alt="Resume">
   
 </div>
 
@@ -34,9 +34,9 @@ z1web is your one-stop source for all things Zak. Check out my skills, read insi
 
 <div align="center">
 
-  <img src="LavaLamp.gif" width="100" alt="Lava Lamp">
-  <img src="RoboDance.gif" width="100" alt="Robo Dance">
-  <img src="WalkingKitty.gif" width="100" alt="Walking Kitty">
+  <img src="Graphics/LavaLamp.gif" width="100" alt="Lava Lamp">
+  <img src="Graphics/RoboDance.gif" width="100" alt="Robo Dance">
+  <img src="Graphics/WalkingKitty.gif" width="100" alt="Walking Kitty">
 
 </div>
 
@@ -46,7 +46,7 @@ For more fun, check out these ads and backgrounds!
 
 <div align="center">
 
-  <img src="WinzipAd.gif" width="100" alt="Winzip Ad">
-  <img src="xbox360bladesbackground.jpg" width="100" alt="Xbox 360 Blades Background">
+  <img src="Graphics/WinzipAd.gif" width="100" alt="Winzip Ad">
+  <img src="Graphics/xbox360bladesbackground.jpg" width="100" alt="Xbox 360 Blades Background">
 
 </div>
