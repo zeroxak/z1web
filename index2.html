@@ -1,89 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" style="height: 100%;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z1 Web - MUD Version</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background-color: black;
-            color: lime;
-            font-family: "Courier New", Courier, monospace;
-        }
-        #container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        #header, #footer {
-            flex-shrink: 0;
-        }
-        #main {
-            flex-grow: 1;
-            overflow: auto;
-        }
-        pre {
-            margin: 0;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-    </style>
-</head>
-<body>
-<div id="container">
-    <div id="header">
-<pre>
-+---------------------------------------------------------------------------------+
-|                                      Z1 Web                                      |
-+---------------------------------------------------------------------------------+
-| [Blog]  [Info]  [Resume]                                                        |
-+---------------------------------------------------------------------------------+
-</pre>
-    </div>
-    <div id="main">
-<pre>
-| What I Know                                                                     |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| | C#                | | Java           | | Visual Studio  | | Unity          | |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| | JavaScript        | | React          | | JQuery         | | Unreal         | |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| +-------------------+ +----------------+                                           |
-| | .NET              | | MySQL          |                                           |
-| +-------------------+ +----------------+                                           |
-+---------------------------------------------------------------------------------+
-| Design                                                                          |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| | Photoshop         | | Adobe XD       | | Illustrator    | | Blender        | |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-+---------------------------------------------------------------------------------+
-| Admin                                                                           |
-| +-------------------+ +----------------+                                           |
-| | Github            | | Google Analytics                                        |
-| +-------------------+ +----------------+                                           |
-+---------------------------------------------------------------------------------+
-| What I'm Learning                                                               |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| | Bootstrap         | | TypeScript     | | SASS           | | Apache         | |
-| +-------------------+ +----------------+ +----------------+ +----------------+ |
-| +-------------------+ +----------------+ +----------------+                     |
-| | Wordpress         | | AutoDesk Maya  | | Video Editing  |                     |
-| +-------------------+ +----------------+ +----------------+                     |
-+---------------------------------------------------------------------------------+
-</pre>
-    </div>
-    <div id="footer">
-<pre>
-+---------------------------------------------------------------------------------+
-| &copy; 2023 Zakary Elkins                                                      |
-| [Info]                                                                          |
-+---------------------------------------------------------------------------------+
-</pre>
-    </div>
-</div>
-</body>
-</html>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: black;
+        color: lime;
+        font-family: "Courier New", Courier, monospace;
+    }
+    #container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    #header, #footer, #main {
+        flex-shrink: 0;
+        font-size: 2vw; /* Adjust the size based on the viewport width */
+    }
+    #main {
+        flex-grow: 1;
+        overflow: auto;
+    }
+    pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
