@@ -26,9 +26,12 @@
             border: 1px solid lime; /* Emulate a monitor bezel */
         }
         /* Content structure */
-        #header, #footer, #main {
+        #header, #footer {
             flex-shrink: 0;
             font-size: 1.5vw;
+            white-space: nowrap; /* Prevent wrapping */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis if text overflows */
         }
         #main {
             flex-grow: 1;
@@ -45,6 +48,17 @@
         .crt {
             filter: contrast(150%) brightness(150%);
             background: radial-gradient(ellipse at center, rgba(0, 150, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+        }
+        /* Responsive Font Size */
+        @media (max-width: 768px) {
+            #header, #footer {
+                font-size: 4vw; /* Increase font size on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            #header, #footer {
+                font-size: 5vw; /* Further increase font size on even smaller screens */
+            }
         }
     </style>
 </head>
@@ -74,6 +88,7 @@
 </div>
 <script>
     const text = `Welcome to Z1 Web Terminal...\n\nLoading...\n\n| What I Know                                                                    |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| | C#             | | Java          | | Visual Studio | | Unity         |       |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| | JavaScript     | | React         | | JQuery        | | Unreal        |       |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| +----------------+ +---------------+                                           |\n| | .NET           | | MySQL         |                                           |\n| +----------------+ +---------------+                                           |\n+--------------------------------------------------------------------------------+\n| Design                                                                         |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n| | Photoshop     | | Adobe XD      | | Illustrator   | | Blender       |        |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n+--------------------------------------------------------------------------------+\n| Admin                                                                          |\n| +---------------+ +-----------------+                                          |\n| | Github        | | Google Analytics|                                          |\n| +---------------+ +-----------------+                                          |\n+--------------------------------------------------------------------------------+\n| What I'm Learning                                                              |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n| | Bootstrap     | | TypeScript    | | SASS          | | Apache        |        |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n| +---------------+ +---------------+ +---------------+                          |\n| | Wordpress     | | AutoDesk Maya | | Video Editing |                          |\n| +---------------+ +---------------+ +---------------+                          |\n+--------------------------------------------------------------------------------+`;
+    document.getElementById('typed-text').innerHTML = ''; // Clear existing content
     let i = 0;
     function typeWriter() {
         if (i < text.length) {
