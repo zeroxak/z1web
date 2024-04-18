@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z1 Web - MUD Version</title>
     <style>
-        /* Basic styling */
+        /* Base reset */
         html, body {
             margin: 0;
             padding: 0;
@@ -13,13 +13,19 @@
             background-color: black;
             color: lime;
             font-family: "Courier New", Courier, monospace;
-            overflow: hidden; /* Ensures the screen fits like a CRT display */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        #container {
+        /* Main container */
+        #terminal-container {
+            width: 75%;
+            height: 75%;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            border: 1px solid lime; /* Emulate a monitor bezel */
         }
+        /* Content structure */
         #header, #footer, #main {
             flex-shrink: 0;
             font-size: 1.5vw;
@@ -32,26 +38,18 @@
             margin: 0;
             white-space: pre-wrap;
             word-wrap: break-word;
+            line-height: 1.5;
+            letter-spacing: 2px;
         }
         /* CRT Screen Effect */
         .crt {
             filter: contrast(150%) brightness(150%);
             background: radial-gradient(ellipse at center, rgba(0, 150, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
         }
-        /* Terminal-like character spacing */
-        pre {
-            font-family: 'Courier New', monospace;
-            line-height: 1.5;
-            letter-spacing: 2px;
-        }
-        /* Menu Options */
-        .menu-option {
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-<div id="container" class="crt">
+<div id="terminal-container" class="crt">
     <div id="header">
 <pre>
 +--------------------------------------------------------------------------------+
