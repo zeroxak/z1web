@@ -5,77 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z1 Web - MUD Version</title>
     <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background-color: black;
-        color: lime;
-        font-family: "Courier New", Courier, monospace;
-    }
-    #container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    #header, #footer, #main {
-        flex-shrink: 0;
-        font-size: 2vw; /* Adjust the size based on the viewport width */
-    }
-    #main {
-        flex-grow: 1;
-        overflow: auto;
-    }
-    pre {
-        margin: 0;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
-</style>
-
+        /* Basic styling */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            color: lime;
+            font-family: "Courier New", Courier, monospace;
+            overflow: hidden; /* Ensures the screen fits like a CRT display */
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        #header, #footer, #main {
+            flex-shrink: 0;
+            font-size: 1.5vw;
+        }
+        #main {
+            flex-grow: 1;
+            overflow: auto;
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        /* CRT Screen Effect */
+        .crt {
+            filter: contrast(150%) brightness(150%);
+            background: radial-gradient(ellipse at center, rgba(0, 150, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+        }
+        /* Terminal-like character spacing */
+        pre {
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+            letter-spacing: 2px;
+        }
+        /* Menu Options */
+        .menu-option {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<div id="container">
+<div id="container" class="crt">
     <div id="header">
 <pre>
 +--------------------------------------------------------------------------------+
 |                                     Z1 Web                                     |
 +--------------------------------------------------------------------------------+
-| [Blog]  [Info]  [Resume]                                                       |
+| [1. Blog]  [2. Info]  [3. Resume]                                              |
 +--------------------------------------------------------------------------------+
 </pre>
     </div>
     <div id="main">
-<pre>
-| What I Know                                                                    |
-| +----------------+ +---------------+ +---------------+ +---------------+       |
-| | C#             | | Java          | | Visual Studio | | Unity         |       |
-| +----------------+ +---------------+ +---------------+ +---------------+       |
-| +----------------+ +---------------+ +---------------+ +---------------+       |
-| | JavaScript     | | React         | | JQuery        | | Unreal        |       |
-| +----------------+ +---------------+ +---------------+ +---------------+       |
-| +----------------+ +---------------+                                           |
-| | .NET           | | MySQL         |                                           |
-| +----------------+ +---------------+                                           |
-+--------------------------------------------------------------------------------+
-| Design                                                                         |
-| +---------------+ +---------------+ +---------------+ +---------------+        |
-| | Photoshop     | | Adobe XD      | | Illustrator   | | Blender       |        |
-| +---------------+ +---------------+ +---------------+ +---------------+        |
-+--------------------------------------------------------------------------------+
-| Admin                                                                          |
-| +---------------+ +-----------------+                                          |
-| | Github        | | Google Analytics|                                          |
-| +---------------+ +-----------------+                                          |
-+--------------------------------------------------------------------------------+
-| What I'm Learning                                                              |
-| +---------------+ +---------------+ +---------------+ +---------------+        |
-| | Bootstrap     | | TypeScript    | | SASS          | | Apache        |        |
-| +---------------+ +---------------+ +---------------+ +---------------+        |
-| +---------------+ +---------------+ +---------------+                          |
-| | Wordpress     | | AutoDesk Maya | | Video Editing |                          |
-| +---------------+ +---------------+ +---------------+                          |
-+--------------------------------------------------------------------------------+
+<pre id="typed-text">
 </pre>
     </div>
     <div id="footer">
@@ -84,11 +71,20 @@
 | &copy; 2023 Zakary Elkins                                                           |
 | [Info]                                                                         |
 +--------------------------------------------------------------------------------+
-
-     <a href='https://www.free-counters.org/'>... by Free-Counters.org</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=db535ca46f63ddd32f8e2923ce6a7ad5b80bd8c6'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1169712/t/5"></script>
 </pre>
     </div>
 </div>
+<script>
+    const text = `Welcome to Z1 Web Terminal...\n\nLoading...\n\n| What I Know                                                                    |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| | C#             | | Java          | | Visual Studio | | Unity         |       |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| | JavaScript     | | React         | | JQuery        | | Unreal        |       |\n| +----------------+ +---------------+ +---------------+ +---------------+       |\n| +----------------+ +---------------+                                           |\n| | .NET           | | MySQL         |                                           |\n| +----------------+ +---------------+                                           |\n+--------------------------------------------------------------------------------+\n| Design                                                                         |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n| | Photoshop     | | Adobe XD      | | Illustrator   | | Blender       |        |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n+--------------------------------------------------------------------------------+\n| Admin                                                                          |\n| +---------------+ +-----------------+                                          |\n| | Github        | | Google Analytics|                                          |\n| +---------------+ +-----------------+                                          |\n+--------------------------------------------------------------------------------+\n| What I'm Learning                                                              |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n| | Bootstrap     | | TypeScript    | | SASS          | | Apache        |        |\n| +---------------+ +---------------+ +---------------+ +---------------+        |\n| +---------------+ +---------------+ +---------------+                          |\n| | Wordpress     | | AutoDesk Maya | | Video Editing |                          |\n| +---------------+ +---------------+ +---------------+                          |\n+--------------------------------------------------------------------------------+`;
+    let i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById('typed-text').textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50); // Adjust typing speed
+        }
+    }
+    typeWriter(); // Initialize typewriter effect
+</script>
 </body>
 </html>
