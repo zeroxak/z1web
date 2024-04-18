@@ -18,25 +18,24 @@
             justify-content: center;
         }
         /* Main container */
-        #terminal-container {
-            width: 75%;
-            height: 75%;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid lime; /* Emulate a monitor bezel */
-        }
+#terminal-container {
+    width: 75vw; /* Use viewport width to define container width */
+    max-width: 100%; /* Ensure it does not exceed the screen width */
+    height: 75vh; /* Use viewport height for the container height */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; /* Center the container */
+    border: 1px solid lime; /* Emulate a monitor bezel */
+    box-sizing: border-box; /* Include padding and borders in the width and height */
+}
         /* Content structure */
-        #header, #footer {
-            flex-shrink: 0;
-            font-size: 1.5vw;
-            white-space: nowrap; /* Prevent wrapping */
-            overflow: hidden; /* Hide overflow */
-            text-overflow: ellipsis; /* Add ellipsis if text overflows */
-        }
-        #main {
-            flex-grow: 1;
-            overflow: auto;
-        }
+
+        /* Content structure */
+#header, #footer, #main {
+    font-size: 1.5vw;
+    max-font-size: 18px; /* Set a maximum font size */
+}
+
         pre {
             margin: 0;
             white-space: pre-wrap;
@@ -49,17 +48,20 @@
             filter: contrast(150%) brightness(150%);
             background: radial-gradient(ellipse at center, rgba(0, 150, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
         }
-        /* Responsive Font Size */
-        @media (max-width: 768px) {
-            #header, #footer {
-                font-size: 4vw; /* Increase font size on smaller screens */
-            }
-        }
-        @media (max-width: 480px) {
-            #header, #footer {
-                font-size: 5vw; /* Further increase font size on even smaller screens */
-            }
-        }
+        
+@media (max-width: 768px) {
+    #header, #footer, #main {
+        font-size: 3vw; /* Larger font size for readability on smaller screens */
+        max-font-size: 16px; /* Adjust maximum font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #header, #footer, #main {
+        font-size: 4vw; /* Even larger font size for very small screens */
+        max-font-size: 14px; /* Adjust maximum font size for very small screens */
+    }
+}
     </style>
 </head>
 <body>
