@@ -19,8 +19,8 @@
         }
         /* Main container */
         #terminal-container {
-            width: 75vw;
-            height: 75vh;
+            width: 75vh; /* Changed to height-based value for a more square appearance */
+            height: 75vh; /* Keep the height as it was */
             display: flex;
             flex-direction: column;
             margin: auto; /* Center the container */
@@ -29,8 +29,11 @@
             overflow: hidden; /* Hide the overflow of child elements */
         }
         /* Content structure */
-        #header, #footer {
+        #header, #footer, #main {
             font-size: clamp(12px, 1.5vw, 18px); /* Responsive font size with min and max */
+            overflow: hidden; /* Hide overflow */
+            white-space: nowrap; /* Ensure text doesn't wrap */
+            text-overflow: ellipsis; /* Add ellipsis for overflow */
         }
         #main {
             flex-grow: 1;
@@ -61,13 +64,12 @@
             filter: contrast(150%) brightness(150%);
             background: radial-gradient(ellipse at center, rgba(0, 150, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
         }
-        /* Media queries are not necessary for now as clamp() takes care of font scaling */
     </style>
 </head>
 <body>
 <div id="terminal-container" class="crt">
     <div id="header">
-<pre>
+        <pre>
 +--------------------------------------------------------------------------------+
 |                                     Z1 Web                                     |
 +--------------------------------------------------------------------------------+
