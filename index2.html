@@ -18,24 +18,37 @@
             justify-content: center;
         }
         /* Main container */
-#terminal-container {
-    width: 75vw; /* Use viewport width to define container width */
-    max-width: 100%; /* Ensure it does not exceed the screen width */
-    height: 75vh; /* Use viewport height for the container height */
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto; /* Center the container */
-    border: 1px solid lime; /* Emulate a monitor bezel */
-    box-sizing: border-box; /* Include padding and borders in the width and height */
-}
+        #terminal-container {
+            width: 75vw;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            margin: auto; /* Center the container */
+            border: 1px solid lime; /* Emulate a monitor bezel */
+            box-sizing: border-box; /* Include padding and borders in the width and height */
+            overflow: hidden; /* Hide the overflow of child elements */
+        }
         /* Content structure */
-
-        /* Content structure */
-#header, #footer, #main {
-    font-size: 1.5vw;
-    max-font-size: 18px; /* Set a maximum font size */
-}
-
+        #header, #footer {
+            font-size: clamp(12px, 1.5vw, 18px); /* Responsive font size with min and max */
+        }
+        #main {
+            flex-grow: 1;
+            overflow-y: auto; /* Enable vertical scrolling */
+            scrollbar-color: lime black; /* Scrollbar color styled like the terminal text */
+            scrollbar-width: thin; /* Scrollbar width */
+        }
+        /* For Webkit browsers like Chrome/Safari */
+        #main::-webkit-scrollbar {
+            width: 10px;
+        }
+        #main::-webkit-scrollbar-track {
+            background: black;
+        }
+        #main::-webkit-scrollbar-thumb {
+            background-color: lime;
+            border-radius: 5px;
+        }
         pre {
             margin: 0;
             white-space: pre-wrap;
@@ -48,20 +61,7 @@
             filter: contrast(150%) brightness(150%);
             background: radial-gradient(ellipse at center, rgba(0, 150, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
         }
-        
-@media (max-width: 768px) {
-    #header, #footer, #main {
-        font-size: 3vw; /* Larger font size for readability on smaller screens */
-        max-font-size: 16px; /* Adjust maximum font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    #header, #footer, #main {
-        font-size: 4vw; /* Even larger font size for very small screens */
-        max-font-size: 14px; /* Adjust maximum font size for very small screens */
-    }
-}
+        /* Media queries are not necessary for now as clamp() takes care of font scaling */
     </style>
 </head>
 <body>
@@ -76,8 +76,7 @@
 </pre>
     </div>
     <div id="main">
-<pre id="typed-text">
-</pre>
+        <pre id="typed-text"></pre>
     </div>
     <div id="footer">
 <pre>
@@ -99,7 +98,7 @@
             setTimeout(typeWriter, 50); // Adjust typing speed
         }
     }
-    typeWriter(); // Initialize typewriter effect
+    window.onload = typeWriter; // Start the typewriter effect once the window has loaded
 </script>
 </body>
 </html>
