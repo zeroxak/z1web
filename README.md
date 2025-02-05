@@ -1,34 +1,11 @@
-# z1web 🌟
+# portfolio site
 
-Welcome to z1web, where you can find my skills, read my blog, and view my resume.
+this repository is used to host my portfolio website for free.
 
-## Introduction
+## overview
 
-z1web is your one-stop source for all things Zak. Check out my skills, read insightful blog posts, and get to know my professional background through my resume.
+the website is built using html and css. it features a responsive design that adapts for desktop, tablet, and phone screens. the site includes a basic portfolio for myself.
 
-## Features
+## notes
 
-### Skills
-- Check out my skills with some cool animations. 🎨
-  
-### Blog
-- Stay up to date with my latest posts. 📝
-
-### Resume
-- My professional experience and accolades. 🏆
-
-## My Favorite 90's GIFs (Salvaged from Geocities Archives)
-
-<div align="center">
-
-  <img src="Graphics/DootDoot.gif" width="100">
-  <img src="Graphics/LilComputer.gif" width="100">
-  <img src="Graphics/GlowingAnatomicMan.gif" width="100">
-  <img src="Graphics/LavaLamp.gif" width="100">
-  <img src="Graphics/RoboDance.gif" width="100">
-  <img src="Graphics/WalkingKitty.gif" width="100">
-  <img src="Graphics/WalkingSkeleton.gif" width="100">
-  <img src="Graphics/WinzipAd.gif" width="100">
-  
-</div>
-
+feel free to browse the code, but it's not really intended for public cloning or modification.

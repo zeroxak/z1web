@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z1 Web - MUD Version</title>
+    <style>
+        html {
+            height: 100%;
+            background-color: black;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            background-color: black;
+            color: lime;
+            font-family: "Courier New", Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #terminal-container {
+            max-width: 50vw;
+            width: fit-content;
+            min-width: 50vw;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            border: 1px solid lime;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+            text-wrap: wrap;
+            background: url('https://jetholt.com/assets/images/greenscreen.png') center/cover;
+            background-size: 170% 199%;
+            filter: contrast(150%) brightness(150%);
+            background-blend-mode: multiply;
+            border-radius: 15px;
+        }
+        
+        #header,
+        #footer,
+        #main {
+            font-size: clamp(12px, 1.5vw, 18px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        #main {
+            flex-grow: 1;
+            overflow-y: auto;
+            scrollbar-color: lime black;
+            scrollbar-width: thin;
+        }
+        
+        #main::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        #main::-webkit-scrollbar-track {
+            background: black;
+        }
+        
+        #main::-webkit-scrollbar-thumb {
+            background-color: lime;
+            border-radius: 5px;
+        }
+
+        #typed-text{
+            margin-left:15px;
+            margin-right:15px;
+        }
+        
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.5;
+            letter-spacing: 2px;
+        }
+        
+        .crt::before,
+        .crt::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .crt::before {
+            background: repeating-linear-gradient( transparent, transparent 1px, rgba(0, 0, 0, 0.25) 1px, rgba(0, 0, 0, 0.25) 2px), repeating-linear-gradient( 90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+        }
+        
+        .crt::after {
+            background: rgba(18, 16, 16, 0.1);
+            animation: flicker 0.8s infinite;
+        }
+        
+        @keyframes flicker {
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="terminal-container" class="crt">
+        <pre id="header-content"></pre>
+        <div id="main">
+            <pre id="typed-text"></pre>
+        </div>
+        <pre id="footer-content"></pre>
+    </div>
+    <script>
+        function updateBorder() {
+            const container = document.getElementById('terminal-container');
+            const charWidthEstimate = 9;
+            const borderWidth = container.offsetWidth - (parseInt(getComputedStyle(container).paddingLeft) * 2);
+            const borderLength = Math.floor(borderWidth / charWidthEstimate);
+            const border = '+'.padEnd(borderLength - 1, '-') + '+';
+
+            const headerText = 'Z1 Web';
+            const footerText = '© 2024 Zakary Elkins';
+            const paddingLengthHeader = Math.floor((borderLength - headerText.length - 2) / 2);
+            const paddingLengthFooter = Math.floor((borderLength - footerText.length - 2) / 2);
+
+            const paddedHeader = ' ' + ' '.repeat(paddingLengthHeader) + headerText + ' '.repeat(paddingLengthHeader) + ' ';
+            const paddedFooter = ' ' + ' '.repeat(paddingLengthFooter) + footerText + ' '.repeat(paddingLengthFooter) + ' ';
+
+            document.getElementById('header-content').textContent = paddedHeader;
+            document.getElementById('footer-content').textContent = paddedFooter;
+        }
+
+        window.addEventListener('resize', updateBorder);
+
+        updateBorder();
+
+        const text = `Welcome to Zakary Elkins' Profile Terminal...
+
+Loading Profile...
+
++---------------------------------------------------------+
+| Contact Information                                     |
++---------------------------------------------------------+
+| Name: Zakary Elkins                                     |
+| Email: zakaryelkins@gmail.com                           |
+| Phone: +1 (325) 665 0447                                |
++---------------------------------------------------------+
+| Quick Links: [1. Back to Main]                          |
++---------------------------------------------------------+
+
++---------------------------------------------------------+
+| Skills                                                  |
++---------------------------------------------------------+
+| Programming Languages: Java, C, Python                  |
+| Web Development: HTML, CSS, JavaScript                  |
+| Frameworks/Libraries: Node.js, ReactJS                  |
+| IDEs: Visual Studio, Netbeans, VS Code, Eclipse         |
+| Version Control: Git, GitHub                            |
+| Debugging/Testing: Chrome Dev Tools, Visual Studio      |
+| Collaboration: GitHub                                   |
+| Graphic Design: Adobe Suite (Photoshop, Illustrator,    |
+|                 InDesign, Lightroom, Premier, etc.)     |
++---------------------------------------------------------+
+
++---------------------------------------------------------+
+| Education                                               |
++---------------------------------------------------------+
+| Texas State Technical College, Waco                     |
+| AS in Computer Programming                              |
+| Spring 2021 - Present                                   |
+|                                                         |
+| Courses: Java, C, Web Dev (HTML, CSS, JavaScript),      |
+| Graphic Design (Illustrator, InDesign, Photoshop)       |
+|                                                         |
+| Continuously engaging in self-learning to stay updated  |
+| with industry trends and best practices.                |
++---------------------------------------------------------+
+
++---------------------------------------------------------+
+| Work Experience                                         |
++---------------------------------------------------------+
+| Quality Implement Company, Stamford Texas               |
+| Operations Assistant                                    |
+| December 2020 - September 2021                          |
+| - Organizational skills and attention to detail         |
+| - Smooth operations between multiple stores             |
+| - Managed parts transfers and janitorial duties         |
+|                                                         |
+| Walmart Supercenter, Stamford Texas                     |
+| Cashier                                                 |
+| July 2020 - October 2020                                |
+| - Customer service and communication skills             |
+| - Handled financial transactions efficiently            |
+| - Experience in a fast-paced customer-oriented setting  |
++---------------------------------------------------------+
+
+`;
+
+        let i = 0;
+
+        function typeWriter() {
+            const typedTextElement = document.getElementById('typed-text');
+
+            if (i < text.length) {
+                typedTextElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 20);
+            } else {
+                setTimeout(() => {
+                    typedTextElement.textContent = typedTextElement.textContent.replace('Loading...\n\n', '');
+                }, 1000);
+            }
+        }
+
+        function adjustBordersAndText() {
+            updateBorder();
+            typeWriter();
+        }
+
+        window.onload = adjustBordersAndText;
+    </script>
+</body>
+
+</html>
