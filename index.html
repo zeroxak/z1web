@@ -4,159 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>z1 web</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Zakary Elkins - IT Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="header">
-        <div id="iconContainer"></div>
-        <h1>z1 web</h1>
-        <nav class="navigation-container">
-            <div class="navigation" onclick="navigateTo('blog')">
-                <p>Blog</p>
-            </div>
-            <div class="navigation" onclick="navigateTo('info')">
-                <p>Info</p>
-            </div>
-            <div class="navigation" onclick="navigateTo('resume')">
-                <p>Resume</p>
-            </div>
-        </nav>
+    <header>
+        <div class="container">
+            <h1>Zakary Elkins</h1>
+            <p>IT Technician and Tech Support Specialist</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
-    <script src="JS/scripts.js"></script>
-    <script type="module" src="JS/icon.js"></script>
-    <div class="section">
-        <h2>What I Know</h2>
-        <div class="section">
-            <h2>Development</h2>
-            <div class="icon-label-container">
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-csharp-1175240.png?f=webp&w=256"></img>
-                    <h3 class="icon-label">C#</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png"></img>
-                    <h3 class="icon-label">Java</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn-icons-png.flaticon.com/256/5968/5968389.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Visual Studio</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://i.redd.it/tu3gt6ysfxq71.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Unity</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-javascript-2752148-2284965.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Javascript</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-react-2752089-2284906.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">React</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-jquery-8-1175153.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">JQuery</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-unreal-engine-2749375-2284765.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Unreal</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-microsoft-dot-net-1-1175179.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">.NET</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-mysql-3628940-3030165.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">MySQL</h3>
-                </div>
+
+    <section id="about" class="split-about-skills">
+        <div class="container">
+            <div>
+                <h2 class="titlecard">About Me</h2>
+                <p>I'm Zakary Elkins, an IT Technician with a knack for resolving tech issues and supporting users.</p>
+                <ul>
+                    <li>Customer service and troubleshooting</li>
+                    <li>Custom software solutions</li>
+                    <li>Video game console repair and restoration</li>
+                    <li>Soldering and electronic repair</li>
+                    <li>Arduino and Raspberry Pi projects</li>
+                    <li>Texas State Technical College alum</li>
+                </ul>
             </div>
+            
         </div>
-    </div>
-    <div class="section">
-        <div class="section">
-            <h2>Design</h2>
-            <div class="icon-label-container">
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Photoshop</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://static-00.iconduck.com/assets.00/adobe-xd-icon-256x256-ounqix35.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Adobe XD</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAw1BMVEUzAAD/mgD/////oAAuAAAhAAAxAAD/nAD6lgBbJgAvAAD/ngDxjwBjMAAsAAAfAAAlAAAXAABKGAAjAAA2AAAoAAAaAAASAADbgQDq5uaYioqLfHzFcgDihQDpigDh3NxoUlKSTwDHwMCpnZ1KJyc8EBAMAABYPDzX0NBGIyO3aABqMwCcVgClXQCJSQDRegA7CQB+QQBDEgBhSUlzXl6uYwB4PQBSIAC+bQCEcnJ2ZGRAGRnDurpNLi65r69WODhGFgAu/C2DAAAJnElEQVR4nO2de1/iOBSGSyktUmzpVIqACkNVvM14Qcdxd3Hm+3+qTXEQaN60KQub0/z6/qtiHnJ6knNJapg5Gk3i4Xh6fmHQ08X5dDyMJ6M8BCOTLx63Ar/TtWxbNQ+UbVvdjh/Y4ziTU8zYj//uhR5NuE3ZXtj7O+4XZpzMgrAMfEvZYTCbFGL8Zx5YqkddWFYw/0easT8rIWEiK5ghiwWMg0tP9WC3lnc5kGDsz33VA/1P8ufcVKYZ36NymulKVvSezTjsqR7iDtQbZjE+l9tOl/KfxYyzUPXodqRwJmKcdlSPbWfq/sKMz7rMYqLODDG+6fEsLtV44xnfA9Wj2rGiOM3Y1w2RLSGjFON52Zd+Xtb1JuOgoXpEe1BjsM6ooaUmCvprjOPyRhpZ8sYrxome08gmcvLJONXP4XzImi4Zr3QINrB6V38YNX0aEy2eSMbYj1SPZI+K+gvGWKe9eFphvGC8bqkeyB7Vuk4YR/p6nERs12robaoLYzV09qqJmGc1zFaZyhrFZRumMdJ1H7dUMDImeqU4ePkTI9YnGYfViY2h3i6HOZ2hMdY15ljKGhu/9HarzLH+Mq61Zzw3KDal7Fb6E1aqVKlSpUq6ye42/Cjyy9F9uZXs6Ojx5uT0/ufLrefrSRk+nDiuk8h1azdHXdXj2YOCr45T+5Rbu9UvXxG81Gsbcr/qBunfpRAZ5KFeGQvvlkOs1dpUMk92S6BCjjE6c3hG944GZOvhi0BPBRwjnEY2kSQqM/ZRrS7Sd3nIxg2YRjaRrxQqbPZvFw0ukXMsn5CPzuBHuF8pLJKtV2hkH5BP0o+k38SM3yiU2KwDMWMBl9HA1uDcUOgG834IbbXmnEm7jAb+pmgwdu7EjLX6q2xKnrStChzinyG+yA5R5HMKuOb9KTjNYKy1ZZtk/BO6a4dtZJgqM9ZDSWPtfqe7B+h+z2R0biRDB9tDDySNvVx0n2WqtVpTdiI6X8FENil4HNvIJGTG+kM2POrdcxbh3lKIrXJMlRnriazXsVvtlEnUacTIwXG2qTJJZ9gs43T9C3OcRxKdi/ZRLmL9UXqFa/nfHPfjAx23fv+Fgr9JHEWOqbLR3heYjYZ1d5z41+bZy2tAYGVMJGGqNccokA+wO5F/9PQQBiGVvgz7iZvGU46xcAhok7p+gd+Ptx856iKRMkH10ntV597gjdd9IvJkbaPWl/SkuXeXfHqNxoZsS4Xf0oz1g+iFN1b5SJme+JRo00M5RFcuUrZ57ZsgVxaXrXKOI6PLxw/ui0zConHEq6OaMuTMMnnyUCAiEyn799yfsT8ssrbuQ702Msou2PrIRMo+QGTPt9qtgHXIwSRRO+9smQ3/zA8gGihGVs3YuEnDfKD0QPapWVJGnzPVj3iYZ2dGnB8pU2REi8SiGod+IBEpU2T0f6b95zKKCtFou3kOkiQjN6ZlgIFSpfm5YIKMoMzhPnzMlcfHHmyO84IPgoz8ZDmny21pB4zWecgxVoKMIW+O35bhBdrq5EbK9Bi9R77R5HPnjRKSuZEyPUYwVWefy4P9ALI89ZxImRwjSI+vBxcolZVXSSTHCKyxvtYThequzlm2sZJjBKa6Xryxn0B9xs0eLzVGUHTcDC24ZFYtN1KmxghixM36FJ/pYWpnGis1RuBTmtb6Gm+9AsZ6ZqWNGKP9xCGmqxqohSE7UibGCNxmes/d4FOQbK6z8qzEGEErh2ttbketQ+BZM2vKtBhbv7nx8zu1SzDkzEiZFiNwmny6nw+hE8iM1YMWY8CXNJzf6c0o7LnNipRJMYJ1wTnllz6QL8+MlEkx8unxtdBxJdgcltHQSorxkss5wrgJZTxYpCxcPigxgp7cVZZjXRGaR/ibC1Fi9PleThwawi4zcaRMipE3VdyAiYo7GZEyIUawJjADBOVR2+J3tUmkLNoGEGIEa7uo3g+7d4WRMiHGHhhJUyDwq+JImQ6j90N80kFOzUv8yXQYI9z2XUCiSJkMI+6ILiRRpEyGEaTHC6uJ9+VkGPO6x2VUf4TGSoax898RRQ2tVBhzu8flIGFNmQpjsANTFUXKRBjthx0Qisp0RBjhLnsbSBQpE2GU6R6XEdzg0mAE3ePbCUbKNBgzT3MWkvuFDzhpMEaZJx0LMYJImQQjamjcViBSJsEIa4pbCoydBCPq2dxW4Lg4BUbrAEyjI7zGYiUI2eS2ARQYUUXROT44zNMBn8erodObFBhBzjG5qMjKUwTP1jsn6UiZACMsmrp5jX6G8K4LrqZMgBFddZAc58hXBI2Vi5QJMAZgCHIHqWBrAB8pq2f0blFiH2zJeEGHzB/9VM+ISt+yZ8XwwppuaFXPiPrgZe9EwRuk9MOsnBGmx2UvjhHclJRyysoZYXpcWILi/hoGLCmPpZwRdcHLnfhLJDDWzUhZNWMX1val/78gKts8+qmaEabHC1xtg9pZ0z5LMaPdAv++yG1agizJxtFPxYwwPZ7djbopQbZrg0AxI8w5totcihbBrOXGJUlqGeFxDZmjqSsJ7i5ZN1a1jHCAEqc21yS4g2a9oVUtIza0YlcU4RT7eqSslBEe1uDj+GyJqnqrh1opI3T8gmKwUPYRRFz7GKWMoCWXySp4OQGusq9FyioZbbQRc4tc4LQQvgfQqR0tv6uohloI/y+fc9rmdFb8f3eP+Y9pt08/f954AT8+/p/ul7Ojhp9WtMXXy33IQiuTD9GPd8hRqVKlSpUqVapUqVKlSpUqVapUqVKlSpVkpP+b5y+Mc9U3Yu9b9rnxS3vGqTGm8m6MfckaG0MKbxvap7yhEZf4PQxS6sTGRPeSlz8xRqV+MYqEgpFhqn7TwJ5lM0LzWW+n4z0zxpjCq+r2pzBmjKMSv/xFQr0RYzSvS/ymoly1rs2EUWtjZaaaMPZ1Xj2i/oLRHOvrWb2x+cF4pa/X6V39YTSnusYe1tRcMk50fSKDySejrk/k4mlcMmrqWnv9NUZzQOGN7rtWY2CuM5pz/dyOdW5uMvZJvJp3pwpGKUbzXbdHMng304zmm15JD//N5BnNZ5325p2ZiRjNqT4puu7cxIz6QIZTU8RojvV4Jv1nU8xovungXYM3M4uRLSFl3wxYq0VDwGj2z8u9rfPn/TQSx8j2rpfljUK8ywEPBBjN0SwoZ6quFcxGgAcxsqD5uoSPpRVcTyANZmSUs57y90oXkd3pzTChmJFZ7OAiCL0ycNpeGFwMkJXmMTJdxeNW4Hc8r0UT1W55XscPrHF8lYWRybiYzkk8/Gs2p9jicjGf/TWMJ+IJ/KN/AQBluhcSChjpAAAAAElFTkSuQmCC"
-                        height="50px" width="50px"></img>
-                    <h3 class="icon-label">Illustrator</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://www.iconarchive.com/download/i94279/bokehlicia/captiva/blender.ico" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Blender</h3>
-                </div>
-            </div>
+        <div class="image-frame">
+            <img src="images/Corvette.jpg" alt="Zakary Elkins">
         </div>
-    </div>
-    </div>
-    <div class="section">
-        <div class="section">
-            <h2>Admin</h2>
-            <div class="icon-label-container">
-                <div class="icon-label-pair">
-                    <img class="icon" src="data:image/png;base64,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"
-                        height="50px" width="50px"></img>
-                    <h3 class="icon-label">Github</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://static-00.iconduck.com/assets.00/google-analytics-icon-256x256-674k0q7c.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Google Analytics</h3>
-                </div>
-            </div>
+    </section>
+
+	<section id="projects">
+	    <div class="container">
+	        <h2 class="titlecard">Experience</h2>
+	        <div class="projects-grid">
+	            <div class="project-item">
+	                <h3>Walmart Supercenter</h3>
+	                <p class="position-dates">
+	                    <span class="position">Cashier</span>
+	                    <span class="dates">(2020-2020)</span>
+	                </p>
+	                <ul>
+	                    <li>Developed customer service skills</li>
+	                    <li>Learned to handle transactions and money</li>
+	                </ul>
+	            </div>
+            
+	            <div class="project-item">
+	                <h3>Quality Implement Company</h3>
+	                <p class="position-dates">
+	                    <span class="position">Operations Assistant</span>
+	                    <span class="dates">(2020-2021)</span>
+	                </p>
+	                <ul>
+	                    <li>Broke apart thousands of boxes</li>
+	                    <li>Maintained janitorial tasks in a shop</li>
+	                    <li>Transferred parts between stores over hundreds of miles</li>
+	                </ul>
+	            </div>
+            
+	            <div class="project-item">
+	                <h3>Clearfork Bank</h3>
+	                <p class="position-dates">
+	                    <span class="position">IT Technician</span>
+	                    <span class="dates">(2023-Now)</span>
+	                </p>
+	                <ul>
+						<li>Provide daily technical support to entire Breckenridge branch</li>
+	                    <li>Assisted in setting a up new branch</li>
+	                    <li>Learned how to use Windows as an admin in a large business</li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="titlecard">Contact Me</h2>
+            <p>Email: <a href="mailto:zakaryelkins@gmail.com">zakaryelkins@gmail.com</a></p>
+            <p>Phone: +1 (325) 665 0447</p>
+            <p>Location: Stamford, TX 79553</p>
         </div>
-    </div>
-    </div>
-    <div class="section">
-        <h2>What I'm Learning</h2>
-        <div class="section">
-            <div class="icon-label-container">
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Bootstrap</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-typescript-1174965.png?f=webp&w=256" height="50px" width="50px"></img>
-                    <h3 class="icon-label">TypeScript</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="data:image/png;base64,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"
-                        height="50px" width="50px"></img>
-                    <h3 class="icon-label">SASS</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://static-00.iconduck.com/assets.00/google-analytics-icon-256x256-674k0q7c.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Apache</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://cdn.iconscout.com/icon/free/png-256/free-apache-8-1174973.png?f=webp&w=256" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Wordpress</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://static-00.iconduck.com/assets.00/apps-autodesk-maya-icon-512x512-2hrvdn04.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">AutoDesk Maya</h3>
-                </div>
-                <div class="icon-label-pair">
-                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/5/58/Adobe_Premiere_Pro_CS6_Icon.png" height="50px" width="50px"></img>
-                    <h3 class="icon-label">Video Editing</h3>
-                </div>
-            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Zakary Elkins. All rights reserved.</p>
         </div>
-    </div>
-    <footer class="footer ">
-        <p>&copy; 2023 Zakary Elkins</p>
-        <p><a href="#info ">Info</a></p>
-        <a href="/index2.html">index2</a>
     </footer>
 </body>
 
